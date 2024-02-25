@@ -1,0 +1,43 @@
+main{
+	padding-top: 20%;
+}
+.input {
+	border-radius: 20px;
+	padding: 0.4rem 0.4rem 0.4rem 1.8rem;
+	border: solid 2px #3662e3;
+	background-color: #030617;
+	margin-top: 2rem;
+	width: 52%;
+}
+button {
+	border-radius: 12px;
+	padding: 0.8rem 2.5rem;
+}
+input,
+input:focus {
+	background-color: transparent !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 70%;
+	border: 0 none !important;
+	box-shadow: 0 0 0 0 !important;
+	outline: 0 !important;
+	color: #F2F5F9 !important;
+}
+
+input::placeholder {
+	color: #364153 !important;
+}
+
+@media (max-width: 700px) {
+	.input{
+		width: 95%;
+	}
+	input{
+		width: 50%;
+	}
+	main{
+		padding-top: 65% !important;
+		height: auto !important;
+	}
+}
