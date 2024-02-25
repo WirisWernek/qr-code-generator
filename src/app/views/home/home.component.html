@@ -2,8 +2,8 @@
 	<img src="/assets/logo-qr-generator.svg" width="210rem" alt="">
 	<div class="input">
 		<div class="d-flex justify-content-between align-items-center gap-2">
-			<input type="text" placeholder="Enter an url">
-			<button class="btn btn-primary">QR Code</button>
+			<input name="texto" [(ngModel)]="texto" type="text" placeholder="Enter an url">
+			<button (click)="gerar()" class="btn btn-primary">QR Code</button>
 		</div>
 	</div>
 </main>

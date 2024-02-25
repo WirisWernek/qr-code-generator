@@ -1,0 +1,37 @@
+main{
+	padding-top: 8rem;
+}
+
+.demoBorderRadius {
+	border-width: 2px 4px !important;
+	border-radius: 25px !important;
+	overflow: hidden !important;
+}
+
+.qrcodeImage {
+	display: flex !important;
+	width: fit-content;
+	justify-content: center;
+	align-self: center;
+	flex: 1 !important;
+}
+
+.qrcode {
+	display: flex;
+	padding: 2rem;
+	border-radius: 50%;
+	background-color: #1f2e55;
+}
+button, a {
+	border-radius: 12px;
+	padding: 0.8rem 2.5rem;
+}
+.btn-primary{
+	background-color: #3662E3 !important;
+}
+@media (max-width: 800px) {
+	main {
+		padding-top: 25% !important;
+		height: auto !important;
+	}
+}
