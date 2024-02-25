@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-home',
@@ -7,8 +8,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HomeComponent {
 	texto: string = '';
-	@Output() newItemEvent = new EventEmitter<string>();
+	constructor(private router: Router) {}
 	gerar() {
-		this.newItemEvent.emit(this.texto);
+		this.router.navigate(["/generated"], {queryParams: {texto: this.texto}})
 	}
 }
