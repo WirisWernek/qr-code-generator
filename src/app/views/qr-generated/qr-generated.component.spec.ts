@@ -8,8 +8,8 @@ describe('QrGeneratedComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [QrGeneratedComponent]
-    });
+    imports: [QrGeneratedComponent]
+});
     fixture = TestBed.createComponent(QrGeneratedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,7 +1,15 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from './app/app.module';
+import { importProvidersFrom } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { QRCodeModule } from 'angularx-qrcode';
+import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes';
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+	providers: [
+		importProvidersFrom(BrowserModule, QRCodeModule, FormsModule),
+		provideRouter(routes),
+	],
+}).catch((err) => console.error(err));

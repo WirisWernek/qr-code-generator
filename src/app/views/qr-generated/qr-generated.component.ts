@@ -4,10 +4,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ClipboardService } from 'ngx-clipboard';
 import { QRCodeErrorCorrectionLevel } from 'qrcode';
 import { environment } from 'src/environments/environment';
+import { QRCodeModule } from 'angularx-qrcode';
 @Component({
-	selector: 'app-qr-generated',
-	templateUrl: './qr-generated.component.html',
-	styleUrls: ['./qr-generated.component.scss'],
+    selector: 'app-qr-generated',
+    templateUrl: './qr-generated.component.html',
+    styleUrls: ['./qr-generated.component.scss'],
+    standalone: true,
+    imports: [QRCodeModule],
 })
 export class QrGeneratedComponent implements OnInit {
 	texto = '';
